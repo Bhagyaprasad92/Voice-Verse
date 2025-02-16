@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Translation</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff0000, #ffffff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .section__container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            max-width: 1100px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(255, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .header__content {
+            width: 50%;
+            text-align: center;
+        }
+
+        .header__tag {
+            background: #ff0000;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 30px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        h1 span {
+            color: #ff0000;
+        }
+
+        .header__btns {
+            margin-top: 20px;
+        }
+
+        .btn {
+            background: #ff0000;
+            padding: 12px 20px;
+            color: white;
+            font-size: 16px;
+            border-radius: 25px;
+            transition: background 0.3s ease, transform 0.2s;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #cc0000;
+            transform: scale(1.05);
+        }
+
+        /* Form Styling */
+        .form__container {
+            width: 45%;
+            background: rgba(255, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(255, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .form__container h2 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .form__container input {
+            width: 90%;
+            padding: 12px;
+            font-size: 16px;
+            border: 2px solid #ff0000;
+            border-radius: 25px;
+            outline: none;
+            transition: 0.3s;
+            text-indent: 10px;
+            margin-bottom: 15px;
+        }
+
+        .form__container input:focus {
+            border-color: #cc0000;
+            box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.6);
+        }
+
+        .form__container .btn1 {
+            background: #ff0000;
+            border: none;
+            padding: 12px 20px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: background 0.3s ease, transform 0.2s;
+            width: 100%;
+        }
+
+        .form__container .btn1:hover {
+            background: #cc0000;
+            transform: scale(1.05);
+        }
+
+        .form__container .btn1:active {
+            transform: scale(0.95);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .section__container {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .header__content, .form__container {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .btn {
+                padding: 10px 16px;
+                font-size: 14px;
+            }
+
+            .form__container input {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .form__container .btn1 {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav__header">
+          <div class="nav__logo">
+            <a href="#" class="logo">
+              <img src="assets/logo.svg" alt="logo" />
+              <span>Voice Verse</span>
+            </a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#service">Services</a></li>
+          <li><a href="#menu">Service Guide</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#contact">Contact</a></li>
+          
+          <li>
+            <button class="btn">
+              <span><i class="ri-login-box-line"></i></span>
+              Login
+            </button>
+          </li>
+        </ul>
+        <div class="nav__btns">
+          <button class="btn">
+            <span><i class="ri-login-box-line"></i></span>
+            Login
+          </button>
+        </div>
+      </nav>
+    <div class="header__content">
+        <div class="header__tag">
+          More than Faster
+        </div>
+        <h1>Welcome to  <span>Voice verse</span></h1>
+        <p class="section__description">
+          Our job is to bring many paid services in online like translating audio,
+          online courses for education, online textbooks and many more for <span>Free.</span>
+        </p>
+        <div class="header__btns">
+          <div class="btn"><a href="#service" style="color: white;">Services</a></div>
+        </div>
+      </div>
+    <div class="section__container" id="home">
+        <!-- Left Side: Content -->
+        <!-- Right Side: Form -->
+        <div class="form__container">
+            <h2>Get Started</h2>
+            <form action="/">
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Your Email Address" required />
+                <button class="btn1">Subscribe</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
